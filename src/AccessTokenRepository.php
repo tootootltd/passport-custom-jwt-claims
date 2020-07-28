@@ -12,6 +12,6 @@ class AccessTokenRepository extends PassportAccessTokenRepository
      */
     public function getNewToken(ClientEntityInterface $clientEntity, array $scopes, $userIdentifier = null)
     {
-        return new AccessToken($userIdentifier, $scopes);
+        return new AccessToken($userIdentifier, $scopes, $clientEntity);
     }
 }
